@@ -1,0 +1,25 @@
+{{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}}
+{{extend 'layout.html'}}
+
+{{block header}}
+      <div class="jumbotron text-center">
+        {{if response.title:}}
+        <h1>{{=response.title}}
+          <small>{{=response.subtitle or ''}}</small></h1>
+        {{pass}}
+      </div>
+{{end}}
+
+There is no table definition in models but...
+<br>
+<br>
+Go here: <a href='{{=URL("admin", "populate_database")}}'> Populate database, we define all tables </a>
+<br>
+<br>
+Go here: <a href='{{=URL("admin", "index")}}'> GRID </a>
+<br>
+<br>
+Go here: <a href='{{=URL("admin", "comment")}}'> Your commenst in JSON we define 't_post', 't_comment' check the terminal</a>
+<br>
+<br>
+Go here: <a href='{{=URL("admin", "docs", vars={"_orderby":"f_title"})}}'> To see other table, we define 't_docs' only, check the terminal</a>
