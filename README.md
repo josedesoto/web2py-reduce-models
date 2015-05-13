@@ -19,6 +19,10 @@ If you do not specify any table, by default the module will define all. This is 
 DataBase(db=self.db, auth=self.auth, request=self.request) 
 ```
 
+Example of the app where you test a few options:
 
 ![Alt text](./less_models.png?raw=true "Example of the app")
+
+Example loading the "t_docs" table content. In the terminal you can see only "t_docs" is loaded. "t_comments" and "t_post" tables are ignored for this request.
+
 ![Alt text](./less_models1.png?raw=true "Json loading docs table")
